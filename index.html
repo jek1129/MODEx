@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODex - Modular Offline Distance Education Experience</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        /* Main Image Styling */
+        img.main-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            background-color: transparent;
+            transform: scale(1);
+            animation: continuousZoom 3s infinite ease-in-out;
+        }
+
+        @keyframes continuousZoom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Subtitle Styling */
+        .subtitle {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Proceed Button Styling */
+        .proceed-btn {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: #FFD700;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .proceed-btn:hover {
+            background: #DAA520;
+            transform: translateY(-3px);
+        }
+
+        /* Developer Info Styling */
+        .developer-info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="MODEX logo.png" alt="MODEX Logo" class="main-image">
+        <p class="subtitle">Modular Offline Distance Education Experience</p>
+        <button class="proceed-btn" onclick="document.location='welcomepage.html'">Proceed</button>
+        <p class="developer-info">Developed by:<br> Jeric M. Rima, MAE<br>San Jose Community High School</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Systems Servicing NC II - GRADE 11</title>
+    <style>
+        /* Gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Big animated text */
+        h1 {
+            font-size: 4rem;
+            color: white;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        /* Buttons container */
+        .button-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            opacity: 0;
+            animation: buttonFloat 3s ease forwards;
+        }
+
+        /* Buttons */
+        .button-container button {
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #0056b3;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #003f7d;
+            transform: scale(1.05);
+        }
+
+        /* Back arrow button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Popup modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Keyframes for text and button animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes buttonFloat {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back arrow button -->
+    <button class="back-button" onclick="goBack()">&#8592;</button>
+
+    <!-- Big animated text -->
+    <h1 id="titleText">Computer Systems Servicing NC II</h1>
+
+    <!-- Buttons for "Modules" and "Video Lesson" -->
+    <div class="button-container">
+        <button id="modulesButton">Modules</button>
+        <button id="videoLessonButton">Video Lesson</button>
+    </div>
+
+    <!-- Popup modal for Modules -->
+    <div id="modulesModal" class="modal">
+        <div class="modal-content">
+            <h3>Please select</h3>
+            <button onclick="document.location='g11module1st.html'">Quarter 1</button>
+            <button onclick="document.location='g11module2nd.html'">Quarter 2</button>
+            <button onclick="document.location='g11module3rd.html'">Quarter 3</button>
+            <button onclick="document.location='g11module4th.html'">Quarter 4</button>
+            <button onclick="closeModal('modulesModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Popup modal for Video Lessons -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <h3>Please select</h3>
+            <button onclick="document.location='G11videopanel1st.html'">Quarter 1</button>
+            <button onclick="document.location='G11videopanel2nd.html'">Quarter 2</button>
+            <button onclick="document.location='G11videopanel3rd.html'">Quarter 3</button>
+            <button onclick="document.location='G11videopanel4th.html'">Quarter 4</button>
+            <button onclick="closeModal('videoModal')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to go back
+        function goBack() {
+            window.history.back();
+        }
+
+        // Show modal
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Event listeners for buttons
+        document.getElementById('modulesButton').addEventListener('click', function() {
+            showModal('modulesModal');
+        });
+
+        document.getElementById('videoLessonButton').addEventListener('click', function() {
+            showModal('videoModal');
+        });
+
+        // Animation on window load
+        window.onload = function() {
+            const titleText = document.getElementById('titleText');
+            const buttonContainer = document.querySelector('.button-container');
+
+            // Animations will play automatically on page load
+            titleText.style.opacity = '1';
+            buttonContainer.style.opacity = '1';
+        };
+    </script>
+
+</body>
+</html>

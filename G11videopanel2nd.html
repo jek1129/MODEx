@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lesson</title>
+    <link rel="stylesheet" href="videopanelstyles.css">
+    <style>
+        /* Style for the small back arrow */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .back-button:hover {
+            color: #007bff; /* Changes color on hover */
+        }
+
+        /* Grid layout for videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        /* Styling each video item */
+        .video-item {
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .video-item:hover video {
+            border-color: #007bff;
+        }
+
+        /* Modal (Pop-up) styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); 
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto; 
+            padding: 0;
+            width: 80%; 
+            max-width: 900px; 
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Arrow Button -->
+    <button class="back-button" onclick="window.location.href='G11modulevideopage.html'">&#8592;</button>
+
+    <h1>Video Lesson - Quarter 2</h1>
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1GuOMO-t5lAtnxjyrib6oc2OQNdr0gdX5/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Computer Operating System</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/18MN053l6SI6gk3XTQVcMBMqQaVhA-VCU/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Partitioning</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1fWqSwskjv3xdX4rqPmZLC3i-UQ47vanY/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installation Procedures of Windows 7</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1kD52sIEXRBHTwpuosERgE4Oovr471iPZ/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installation Procedures of Windows 8</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1SN7GJPhHva0xwqTTTP0pCJCJhFcQ8nS5/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installation Procedures of Windows 10</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1gS28gUdEZkKOhnyo2Z1TGLi56eCpkaPs/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installation Procedures of Windows Server 2008</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Types of Computer</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1nD_Y3D7GaaWKpqBha2kepUjPGLRHhPK9/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installing Microsoft Office</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Types of Computer</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1R17J2pOnUU2mGt8AHck0boVY_L6syXRH/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installing Utility Software (Power ISO)</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1E-sSO6F2GhQb-WQU59ngBwiryJmwcf4E/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installing Utility Software (HEAVY LOAD)</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1fiodMeBuS_EtuJ2QhnQ_Vw978YsTMeTF/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Installing VMware</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1UFgAs8IrMfNy2NAcHyov_XzsLSqded_s/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>How to use VMware</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1sSMZXpznX7GjCF0BzRfF2mCOP0YJ27su/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Driver Pack</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1GMZ02xdHQhhd0Jljd2ugvZc9pJr6kqiS/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Stress test procedures</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-item">
+            <a href="" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Types of Computer</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Parts and Functions of Computers</p>
+            </a>
+        </div>
+        <div class="video-item">
+            <a href="https://drive.google.com/file/d/1R6gliMXoyZ67eQ0H8_mDegxvPQsuGd2h/preview" target="_blank">
+                <video poster="thumbnails/quarter2.png" muted></video>
+                <p>Reporting and Documentation Procedures</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoFrame" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("videoModal");
+
+        // Get the <iframe> element inside the modal
+        var videoFrame = document.getElementById("videoFrame");
+
+        // Get the <span> element that closes the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Function to open the modal and set the video URL
+        function openModal(videoURL) {
+            modal.style.display = "block";
+            videoFrame.src = videoURL;
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            videoFrame.src = "";  // Stop the video when closing the modal
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                videoFrame.src = "";  // Stop the video when closing the modal
+            }
+        }
+    </script>
+
+</body

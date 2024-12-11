@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        h1, p {
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Welcome text */
+        h1 {
+            font-size: 4rem;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        /* Text for grade selection */
+        p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease forwards;
+        }
+
+        /* Button styles */
+        .grade-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            opacity: 0;
+            animation: floatIn 4s ease forwards;
+        }
+
+        .grade-buttons button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #0056b3;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .grade-buttons button:hover {
+            background-color: #003f7d;
+            transform: scale(1.05);
+        }
+
+        /* Back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Back arrow button -->
+    <button class="back-button" onclick="goBack()">&#8592;</button>
+
+    <!-- Welcome text -->
+    <h1 id="welcomeText">Welcome, CSS students!</h1>
+    <p id="chooseText">Choose your grade level</p>
+
+    <!-- Grade level buttons -->
+    <div class="grade-buttons">
+        <button id="grade11Button" onclick="document.location='G11modulevideopage.html'">Grade 11</button>
+        <button id="grade12Button" onclick="document.location='G12modulevideopage.html'">Grade 12</button>
+    </div>
+
+    <script>
+        // Back button function
+        function goBack() {
+            window.history.back();
+        }
+
+        // Add simple fade-in animation for the welcome text and buttons
+        window.onload = function() {
+            const welcomeText = document.getElementById('welcomeText');
+            const chooseText = document.getElementById('chooseText');
+            const grade11Button = document.getElementById('grade11Button');
+            const grade12Button = document.getElementById('grade12Button');
+
+            // Add floating effect to the buttons after a slight delay
+            setTimeout(() => {
+                grade11Button.style.transform = "translateY(0)";
+                grade12Button.style.transform = "translateY(0)";
+            }, 2000);
+        };
+    </script>
+</body>
+</html>

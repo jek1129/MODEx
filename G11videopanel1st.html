@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lesson</title>
+    <link rel="stylesheet" href="videopanelstyles.css">
+    <style>
+        /* Style for the small back arrow */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .back-button:hover {
+            color: #007bff; /* Changes color on hover */
+        }
+
+        /* Grid layout for videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        /* Styling each video item */
+        .video-item {
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .video-item:hover video {
+            border-color: #007bff;
+        }
+
+        /* Modal (Pop-up) styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); 
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto; 
+            padding: 0;
+            width: 80%; 
+            max-width: 900px; 
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Arrow Button -->
+    <button class="back-button" onclick="window.location.href='G11modulevideopage.html'">&#8592;</button>
+
+    <h1>Video Lesson - Quarter 1</h1>
+   <div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/16v5QJsXSkX4yfWZqbAseyaeFYKa7aNDh/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Types of computer</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1M-_vUqz3Z-nO_tShJMbe2Tf41O5kQ2Jk/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Parts and Functions of Computers</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1HXfuSHU5scExlG_vOEs1rdFJVjyMLcat/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Parts of System Unit and Their Functions</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1gKYtvX66fqSXnS_eSfN1vVXlW3Knyty8/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Parts of the Motherboard and their Functions</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1mtECyLU50qMleiRwnpkZ6bYjQKX2WhwR/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Multimedia Storage Devices</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1gNsXwYWINqmfl1kQdX9-RDuwdwEQjKE5/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer Peripheral Devices</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1P25Yr5ZPUbDVxMcmS0457RE7YVmKRQwY/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer System Specification</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/13exe6IRLhSQH55ZvOSMi9l-8f5lpUZ6S/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer Form Factor</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1idSxUtINmNaocT2KLt47u8emvdV4t95n/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Personal Protective Equipment (PPE) and Tools</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/16tjlZpnnVdEkVh6EdAKyXp1zT7X-IB91/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Occupational Health and Safety procedures</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1DaufJ5CM00l4lwM_DjquVfIpPlYQ3Tsp/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer Disassembly Procedures</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1YtBsJBj-YaFj__JJ7ySBp2eBLFIcotRb/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer Assembly Procedures</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1gR-GhRZBHNS9gb92v2jHm9e-EjKIydhY/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Basic-input-output-system (BIOS) configuration procedures</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1HkxBczcefRvAmiEjc1CUUQj48bSUcuZW/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Flash Update BIOS/UEFI</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1ywC26wxo3iQmJ3VmWIwMYmBu9_W91IEc/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>BIOS vs. UEFI</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1FzyI5KwOwuuEJb2BsujTVW13UH4dZvGP/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Introduction to bootable software</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1E99OE9BcwALkTGbz3c76DeMmZ7OEDTWH/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>DOS command in preparing bootable device</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1B8Th3f8zIHoHSuyQOMe4kYF2Wcc-vlLc/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Creating Image file/s of Installer from different media devices using Power ISO</p>
+        </a>
+    </div>
+</div>
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("videoModal");
+
+        // Get the <iframe> element inside the modal
+        var videoFrame = document.getElementById("videoFrame");
+
+        // Get the <span> element that closes the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Function to open the modal and set the video URL
+        function openModal(videoURL) {
+            modal.style.display = "block";
+            videoFrame.src = videoURL;
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            videoFrame.src = "";  // Stop the video when closing the modal
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                videoFrame.src = "";  // Stop the video when closing the modal
+            }
+        }
+    </script>
+
+</body>
+</html>

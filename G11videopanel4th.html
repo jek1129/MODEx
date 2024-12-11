@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lesson</title>
+    <link rel="stylesheet" href="videopanelstyles.css">
+    <style>
+        /* Style for the small back arrow */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .back-button:hover {
+            color: #007bff; /* Changes color on hover */
+        }
+
+        /* Grid layout for videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        /* Styling each video item */
+        .video-item {
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .video-item:hover video {
+            border-color: #007bff;
+        }
+
+        /* Modal (Pop-up) styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); 
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto; 
+            padding: 0;
+            width: 80%; 
+            max-width: 900px; 
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Arrow Button -->
+    <button class="back-button" onclick="window.location.href='G11modulevideopage.html'">&#8592;</button>
+
+    <h1>Video Lesson - Quarter 4</h1>
+   <div class="video-grid">
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Types of computer</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Parts and Functions of Computers</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Parts of System Unit and Their Functions</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Parts of the Motherboard and their Functions</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Multimedia Storage Devices</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Computer Peripheral Devices</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1Y1ukD5LwcNgKDM1DEgrk0mtGHzgR0iiy/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Setting-up Wireless Network</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1RKqdf8ZvsnK0AbC0ldU34UGHbUYHx2_5/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Setting-up Modem</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1oPppBGx5CSkklbZQCGMQoX0zagqxEIMN/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Setting-up Router ( Quick Setup )</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1LuMBVGsGPdrBDmduhQs8lMfKkTv4lZcc/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Setting-up Router ( Advanced Setup )</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1AFyizEIdyfgkm4Fl-VvblwDPyp7WHWkr/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Configuring Wireless Access Point ( Quick Setup )</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1iKCqpYAZ4q01BunsDleH9U_GUoeR-qUt/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Configuring Wireless Access Point ( Advanced Setup )</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1zPv_Pnn-6wuSrONIqY6G6YbIQtehz7UC/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Configuring Wireless Access Point Switch</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1m1-DV5HDPDphEvZ_7BrvUuRyIQ3Tb_pt/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Network interface card types and configuration settings</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1Re9zUQ8AyXbMBRWATgEypnz17Gbhlyq0/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Configuration of Patch Panel</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1WUZiQ6yItdWnV_Z3G3Qj-ydqG1RIusEd/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Network inspection procedures</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1JlGrYEwo3yJ_bKf1snFDKYNPsQ8PDH9k/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Safe computer network operation</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1YoJS2X8QuJwU57Jr-IH3Jb0pS6mM6RO-/preview" target="_blank">
+            <video poster="thumbnails/quarter4.png" muted></video>
+            <p>Documentation checklist in computer networks</p>
+        </a>
+    </div>
+</div>
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("videoModal");
+
+        // Get the <iframe> element inside the modal
+        var videoFrame = document.getElementById("videoFrame");
+
+        // Get the <span> element that closes the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Function to open the modal and set the video URL
+        function openModal(videoURL) {
+            modal.style.display = "block";
+            videoFrame.src = videoURL;
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            videoFrame.src = "";  // Stop the video when closing the modal
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                videoFrame.src = "";  // Stop the video when closing the modal
+            }
+        }
+    </script>
+
+</body>
+</html>

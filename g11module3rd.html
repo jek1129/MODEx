@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 11 Module</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style for the small back arrow */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .back-button:hover {
+            color: #007bff; /* Changes color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Arrow Button -->
+    <button class="back-button" onclick="window.location.href='G11modulevideopage.html'">&#8592;</button>
+
+
+    <h1>Computer Systems Servicing NC II</h1>
+	
+    <div class="container">
+        <!-- Left Panel for Buttons -->
+        <div class="left-panel">
+		<h2>Grade 11 - Quarter 3</h2>
+            <button onclick="openPDF('https://drive.google.com/file/d/1HrJuoNI2uEazin-oVm1AtCnSoxktdd0y/preview')">Module 37</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1WhV5VVew4vf1NO_JL0CiFcNVtQTE2h0p/preview')">Module 38</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1mhPyUMLzYLf0XQ7rvywI0BIhlQXOvXl_/preview')">Module 39</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/18JuXw6f7efMvAxC1V7mMO8xjNKBHf34z/preview')">Module 40</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1ZCkfiyO9rxuvbR6QW10hd5Ol4aRAT5aT/preview')">Module 41</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1nz7QyygUrptWALOlwdWv8-FGnE_ENftf/preview')">Module 42</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1CNyybKRm0w5wdtvu3hUnhvDVree7Qu_P/preview')">Module 43</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/145K6SK6Jq7IcSzp9cHrMqJVhzNhqrpYF/preview')">Module 44</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1WJfIRJaSKOpICa3ZFYyAPHuf7gblSeQr/preview')">Module 45</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1LpvL9aDjgz4_CAPbjevkyCUX-ub63Q4m/preview')">Module 46</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1zEBBHzesp8m70PgNjgqysS2tdVOIQLjk/preview')">Module 47</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1C9cXgnHmZ7MI3KOd9swQUAL6zDSJOJqz/preview')">Module 48</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1TwtT_P5AIW_gNxNQjYLtMZ464YhsUsQu/preview')">Module 49</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1FHvuh_T6KfeGQJcqeHmZRDqvM7C1TaP4/preview')">Module 50</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1WyS1snDOuRg1ebkNeovPrH9wmthRe_mc/preview')">Module 51</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1Rna1yYYkd8knAkfz-gpd9PQBMOovUhK4/preview')">Module 52</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1GxAb1XrokGE1OKb8PDuJ_pPZIsGwhTLH/preview')">Module 53</button>
+            <button onclick="openPDF('https://drive.google.com/file/d/1vfSmHPKAducXz_nXmQg-Xs2PKAZI-snf/preview')">Module 54</button>
+        </div>
+
+        <!-- Right Panel for PDF Viewer -->
+        <div class="right-panel">
+            <iframe id="pdfFrame" src="" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openPDF(file) {
+            const pdfFrame = document.getElementById('pdfFrame');
+            pdfFrame.style.opacity = '0';
+            setTimeout(() => {
+                pdfFrame.src = file;
+                pdfFrame.onload = () => {
+                    pdfFrame.style.opacity = '1';
+                };
+            }, 300);
+        }
+
+        // Function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

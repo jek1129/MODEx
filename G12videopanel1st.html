@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lesson</title>
+    <link rel="stylesheet" href="videopanelstyles.css">
+    <style>
+        /* Style for the small back arrow */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .back-button:hover {
+            color: #007bff; /* Changes color on hover */
+        }
+
+        /* Grid layout for videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        /* Styling each video item */
+        .video-item {
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .video-item video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .video-item:hover video {
+            border-color: #007bff;
+        }
+
+        /* Modal (Pop-up) styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.8); 
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 5% auto; 
+            padding: 0;
+            width: 80%; 
+            max-width: 900px; 
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover, .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Arrow Button -->
+    <button class="back-button" onclick="window.location.href='G11modulevideopage.html'">&#8592;</button>
+
+    <h1>Video Lesson - Quarter 1</h1>
+   <div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1eWZNR01Nw-ZzTVqdShOYZIUyUxI5w_OH/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Understanding Server-Client Networking</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/17jvPGdi-YWTv8nD8YnZ2nNE8rwY9r1z6/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Types and Functions of a Server</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1nr7NrvBqnqvxsF35wxzHOSUsYT8Pb2uu/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Network Operating System ( NOS )</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1kTHLf9mBI0dmXbK8Ng30IZG06EfTkq-I/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Installing VMware Workstaion 12 for Server-Client Virtualization</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1gah7VDsydvhtSeq2yoVcpbVsl4AiBTSe/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Installing Newtwork Operating System  ( NOS ) in a Virtual Machine</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1_jCUCV1VNOC29qIAfNkdFEo8Ik7inAkH/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Accessing User and Administraors Accounts in Server Operating System  ( NOS ) Using VMware</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1HFVXo_bF1sL9J7AtioIwiuGDsGOTSl7_/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Installing Client on a Virtual Machine</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1PWwhxKgPBMxd0jS2-GRgUTRgEHDDiSkN/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Overview of Windows Server 2008 R2</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1pKQ3F1XHT2df3LWgL3gWv9WUr97MVsjX/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Understanding Server Roles</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/14Y18UoJPn0GZ1E_N-A2fGdoDBB1qJyO5/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Introduction to Active Directory Domain Services ( AD DS )</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/18tLY9hx9lvHaPBY4gZlPrpnK_MitHXqi/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>AD DS Domains</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1N2GEpx_NhyuKhqDZew6IHBzSNxLgSHLj/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>AD DS Forest and Schema</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1ZJ_xHg7cC3i8kQ2MNfl5FzTd6Kw2seBp/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>The Global Catalog</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="https://drive.google.com/file/d/1i_E9ioY8fe21PJwIwCwAF0zZC6BixVlk/preview" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Computer Accounts</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>BIOS vs. UEFI</p>
+        </a>
+    </div>
+</div>
+
+<div class="video-grid">
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Introduction to bootable software</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>DOS command in preparing bootable device</p>
+        </a>
+    </div>
+    <div class="video-item">
+        <a href="" target="_blank">
+            <video poster="thumbnails/quarter1.png" muted></video>
+            <p>Creating Image file/s of Installer from different media devices using Power ISO</p>
+        </a>
+    </div>
+</div>
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("videoModal");
+
+        // Get the <iframe> element inside the modal
+        var videoFrame = document.getElementById("videoFrame");
+
+        // Get the <span> element that closes the modal
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Function to open the modal and set the video URL
+        function openModal(videoURL) {
+            modal.style.display = "block";
+            videoFrame.src = videoURL;
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            videoFrame.src = "";  // Stop the video when closing the modal
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                videoFrame.src = "";  // Stop the video when closing the modal
+            }
+        }
+    </script>
+
+</body>
+</html>
